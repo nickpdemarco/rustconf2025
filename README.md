@@ -8,9 +8,11 @@
 
 ## Zngur, at a high level
 
-<!-- see example1 directory -->
+### [Example 1](/example1)
 
 ```rust
+mod generated;
+
 pub struct Foo {
   value: i32
 }
@@ -44,10 +46,10 @@ int main() {
 }
 ```
 
-<!-- See example2 directory -->
+### [Example 2](/example2)
 
 ```rust
-// empty lib.rs!
+mod generated;
 ```
 
 ```
