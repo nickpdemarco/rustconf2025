@@ -1,0 +1,8 @@
+mod crate {
+  type Foo {
+    #layout(size = 4, align = 4);
+    field value (offset = 0, type = i32);
+  }
+
+  fn get_a_foo() -> Foo;
+}
