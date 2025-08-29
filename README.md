@@ -8,7 +8,7 @@
 
 ## Adobe's needs
 
-- We try to abide by the Chromium Rule of Two
+- We try to abide by the [Chromium Rule of Two](https://chromium.googlesource.com/chromium/src/+/main/docs/security/rule-of-2.md)
   - Memory unsafe language, untrusted input, not sandboxed; you can pick at most two.
 - My charter, roughly, has been to handle untrusted input in our flagship apps using memory safe languages.
 - This mostly means file parsing, but may also include keyboard handling, device drivers, etc
