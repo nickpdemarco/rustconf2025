@@ -6,22 +6,6 @@
 - I'll give us a quick and incomplete summary of Adobe's needs, how Zngur meets them, what I needed to add, and what's to come.
 - Keep in mind that this work is still in development - as I write this we're rolling out a beta internally, but more work is scheduled.
 
-## Adobe's needs
-
-- We try to abide by the [Chromium Rule of Two](https://chromium.googlesource.com/chromium/src/+/main/docs/security/rule-of-2.md)
-  - Memory unsafe language, untrusted input, not sandboxed; you can pick at most two.
-- My charter, roughly, has been to handle untrusted input in our flagship apps using memory safe languages.
-- This mostly means file parsing, but may also include keyboard handling, device drivers, etc
-  - really anything at the boundary between our apps and the outside world should be written in MSLs.
-  - We're looking at sandboxing in some cases, but that work is too nascent and out of scope to discuss.
-- This means I'm focused on the C++ calling into Rust direction much more than the inverse, for now.
-
-- From a DevX perspective, we need the FFI code to be completely transparent.
-  - We don't want the average engineer to have to think about this at all.
-  - ideally, zngur should become an implementation detail of our build system
-  - C++ engineers should be able to interact with mostly-natural looking C++ APIs with expected semantics.
-    - Frankly, it remains to be seen how natural Zngur-FFI APIs will be in practice, but early signs are promising.
-
 ## Zngur, at a high level
 
 <!-- see example1 directory -->
