@@ -153,7 +153,8 @@ We need a strategy for using Zngur in our host application *and* upstream depend
 - We may also embed a hash (the provenance of which is unclear) to prevent identical namespaces from causing ODR violations.
 
 ### [Zngur issue 48](https://github.com/HKalbasi/zngur/issues/48)
-We need the emitted `generated.h` header to be split up along some reasonable semantic lines.
+We need the emitted `generated.h` header to be split up along some reasonable semantic lines, primarily to improve incremental compilation performance.
+Note: A 60-line Zngur spec of ours creates a 4,000-line `generated.h`. This won't scale.
 
 - Still in design. Approximate plan: emit one header per crate. But, where would this symbol go?
 
