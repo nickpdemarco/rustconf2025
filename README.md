@@ -57,26 +57,24 @@ mod generated;
 mod ::std {
 
   mod vec {
+
     type Vec<i32> {
         #layout(size = 24, align = 8);
-        wellknown_traits(Debug);
 
         fn new() -> Vec<i32>;
         fn push(&mut self, i32);
-        fn clone(&self) -> Vec<i32>;
-        fn get(&self, usize) -> ::std::option::Option<&i32> deref [i32];
+        fn get(&self, usize)
+            -> ::std::option::Option<&i32> deref [i32];
     }
+
   }
 
   type option::Option<&i32> {
       #layout(size = 8, align = 8);
-      wellknown_traits(Copy);
-
       fn unwrap(self) -> &i32;
   }
 
 }
-
 ```
 
 ```cpp
